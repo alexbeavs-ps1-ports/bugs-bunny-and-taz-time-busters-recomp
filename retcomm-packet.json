@@ -1,0 +1,98 @@
+{
+  "format_version": 1,
+  "id": "bugs-bunny-and-taz-time-busters-psx",
+  "name": "Bugs Bunny & Taz - Time Busters",
+  "kind": "recomp",
+  "platform": "psx",
+  "source_repo": "bugs-bunny-and-taz-time-busters-recomp",
+  "rom_identity": {
+    "crc32": [
+      "22dd3004"
+    ],
+    "md5": [
+      "03fd0dc4af76689e571eeac73721602c"
+    ],
+    "sha1": [
+      "9beb05a6f61b4a64ca4548f9f7a48c5f4d0bdb3a"
+    ],
+    "disc_serials": [
+      "SLUS-01144"
+    ],
+    "sizes": [
+      678069840
+    ],
+    "filenames": [
+      "Bugs Bunny & Taz - Time Busters (USA) (En,Fr,Es).cue",
+      "Bugs Bunny & Taz - Time Busters (USA) (En,Fr,Es).bin"
+    ],
+    "track_counts": [
+      1
+    ],
+    "disc_fps": [
+      "f01836c0f851a556686541ed5969411abfeb6c7c44539b729ca1975ffd267e06"
+    ],
+    "require_cue": true
+  },
+  "rom_extensions": [
+    ".cue",
+    ".bin",
+    ".chd"
+  ],
+  "bios_identity": {
+    "required": true,
+    "name": "SCPH1001.BIN",
+    "profile": "SCPH1001",
+    "crc32": [
+      "37157331"
+    ],
+    "md5": [
+      "924e392ed05558ffdb115408c263dccf"
+    ],
+    "sha1": [
+      "10155d8d6e6e832d6ea66db9bc098321fb5e8ebf"
+    ],
+    "sha256": [
+      "71af94d1e47a68c11e8fdb9f8368040601514a42a5a399cda48c7d3bff1e99d3"
+    ],
+    "sizes": [
+      524288
+    ],
+    "filenames": [
+      "SCPH1001.BIN"
+    ]
+  },
+  "release": {
+    "github": "alexbeavs-ps1-ports/bugs-bunny-and-taz-time-busters-recomp",
+    "allow_prerelease": false,
+    "asset_glob": {
+      "windows-x64": "bugs-bunny-and-taz-time-busters-*-windows-x64.zip",
+      "linux-x64": "bugs-bunny-and-taz-time-busters-*-linux-x64.zip",
+      "macos-arm64": "bugs-bunny-and-taz-time-busters-*-macos-arm64.zip",
+      "macos-x64": "bugs-bunny-and-taz-time-busters-*-macos-x64.zip"
+    }
+  },
+  "launch": {
+    "windows": "bugs_bunny_and_taz_time_busters.exe",
+    "linux": "bugs_bunny_and_taz_time_busters",
+    "macos": "bugs_bunny_and_taz_time_busters"
+  },
+  "build": {
+    "source": {
+      "github": "alexbeavs-ps1-ports/bugs-bunny-and-taz-time-busters-recomp",
+      "ref": ""
+    },
+    "toolchain": {
+      "id": "cmake-clang-v1",
+      "min_version": "1.0.14"
+    },
+    "generate": {
+      "engine": "psxrecomp",
+      "config": "game.toml"
+    },
+    "cmake": {
+      "build_dir": "build",
+      "target": "psx-runtime",
+      "config": "Release"
+    }
+  }
+}
